@@ -23,7 +23,7 @@
 
 <body class="">
 <nav class="navbar navbar-expand-lg navbar-dark red lighten-1">
-  <a class="navbar-brand" href="#">HOME</a>
+  <a class="navbar-brand" href="#">{{ __('web.main_route') }}</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -31,12 +31,12 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">{{ __('web.main_route') }} <span class="sr-only">(current)</span></a>
       </li>
       
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Podstránky
+        {{ __('web.dropdown') }}
         </a>
         <div class="dropdown-menu red lighten-1" id="dm" aria-labelledby="navbarDropdown">
           <a class="dropdown-item text-white" href="#">ČOSI 1</a>
@@ -49,11 +49,10 @@
 
     <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle text-white" data-toggle="dropdown" role="button" aria-expanded="false">{{ __('web.language') }} <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
-                    <li><a href="{{ url('locale/en') }}" ><i class="fa fa-language"></i> EN</a></li>
-                    <li><a href="{{ url('locale/fr') }}" ><i class="fa fa-language"></i> FR</a></li>
-                
+                    <li><a href="{{ url('locale/en') }}" ><img src="{{ asset('md/img/uk.png') }}" alt="uk" width="20" height="20"> EN</a></li>
+                    <li><a href="{{ url('locale/sk') }}" ><img src="{{ asset('md/img/sk.png') }}" alt="sk" width="20" height="20"> SK</a></li>
                 </ul>
             </li>
         </ul>

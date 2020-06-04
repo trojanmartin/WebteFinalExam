@@ -3,5 +3,5 @@
 @section('title', 'Home')
 
 @section('content')
-   <p>This is appended to the master sidebar.</p>
+<h1>{{ __('web.sprava') }}</h1>
 @endsection
