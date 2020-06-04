@@ -68,6 +68,7 @@
 
 
 
+
     <!-- jQuery -->
 <script type="text/javascript" src="{{ asset('md/js/jquery.min.js') }}"></script>
   <!-- Bootstrap tooltips -->
