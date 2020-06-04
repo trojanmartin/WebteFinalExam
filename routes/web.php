@@ -15,5 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
-     return view('welcome');
+     return view('home');
 });
+
+Route::get('locale/{locale}', function ($locale){
+     Session::put('locale', $locale);
+     return redirect()->back();
+ });
