@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'sprava' => 'Toto je srpáva po slovensky',
+    'sprava' => 'Toto je správa po slovensky',
     'language' => 'Jazyk',
     'main_route' => 'Hlavná',
     'dropdown' => 'Podstránky',
@@ -11,5 +11,6 @@ return [
     'modelC' => 'Model C',
     'modelD' => 'Model D',
     'model' => 'Model',
-    'pocet_navstev' => 'The number of visitors'
+    'pocet_navstev' => 'Počet návštev',
+    'nazov' => 'Názov'
 ];

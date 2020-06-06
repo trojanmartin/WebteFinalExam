@@ -14,8 +14,8 @@ class StatisticsController extends Controller
      */
     public function index()
     {
-        $statistics = Statistics::all()->toArray();
-        return view('layout', compact('statistics'));
+        $stat = Statistics::all();
+        return view('statistic',['stat'=>$stat]);
     }
 
     /**

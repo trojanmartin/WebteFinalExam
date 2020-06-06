@@ -15,11 +15,10 @@ class CreateStatisticsTable extends Migration
     {
         Schema::create('statistics', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
-            $table->integer("model_A");
-            $table->integer("model_B");
-            $table->integer("model_C");
-            $table->integer("model_D");
+            $table->integer("model_A")->default(0);
+            $table->integer("model_B")->default(0);
+            $table->integer("model_C")->default(0);
+            $table->integer("model_D")->default(0);
         });
     }
 

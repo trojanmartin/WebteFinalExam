@@ -11,5 +11,6 @@ return [
     'modelC' => 'Model C',
     'modelD' => 'Model D',
     'model' => 'Model',
-    'pocet_navstev' => 'The number of visitors'
+    'pocet_navstev' => 'The number of visitors',
+    'nazov' => 'Name'
 ];
