@@ -45,7 +45,7 @@ class OctaveController extends Controller
 
         return json_encode($return);
         } catch (\Throwable $th) {
-            return response("Error",500);
+         //   return response("Error",500);
         }
 
 
@@ -71,8 +71,8 @@ class OctaveController extends Controller
                 sys = ss(A-B*K,B,C,D);
 
                 t = 0:0.01:5;
-                r = ". $r . "
-                initPozicia=" . $startPosition . ";
+                r = ". $r . ";
+                initPozicia= " . $startPosition . ";
                 initRychlost= " . $startSpeed . ";
                 [y,t,x]=lsim(N*sys,r*ones(size(t)),t,[initPozicia;0;initRychlost;0]);
                 N*x(:,1)
