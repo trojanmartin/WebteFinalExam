@@ -8,6 +8,8 @@ class OctaveController extends Controller
 {
     public function index()
     {
-        return response("",200);
+        $response = shell_exec("octave --no-gui --quiet ../../kyvadlo.txt {r}");
+
+        return response($response,200);
     }
 }
