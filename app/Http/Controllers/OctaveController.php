@@ -31,13 +31,17 @@ class OctaveController extends Controller
 
         $command = $this->get_ball_script($r,$startPosition,$startSpeed);
 
-        $response = ltrim(shell_exec('octave --no-gui --quiet --eval "pkg load control;'. $command .'"'));
+        $response = trim(shell_exec('octave --no-gui --quiet --eval "pkg load control;'. $command .'"'));
 
-        $parsed = explode("ans= ",$response);
 
-        $position = explode(" ",$parsed[1]);
-        $alfa = explode(" ",$parsed[2]);
+        $parsed = explode("ans =",$response);		
 
+        $position = explode('  ',$parsed[1]);
+        $alfa = explode('  ',$parsed[2]);
+
+	$position = array_map('trim', $position);
+	$alfa = array_map('trim',$alfa);
+       
         $return = array(
             "position" => $position,
             "angle" => $alfa
@@ -45,7 +49,8 @@ class OctaveController extends Controller
 
         return json_encode($return);
         } catch (\Throwable $th) {
-         //   return response("Error",500);
+//throw $th;         
+  	 return response("Error",500);
         }
 
 
