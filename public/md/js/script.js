@@ -1,3 +1,5 @@
+const url = "http://localhost:8000";
+
 function callConsole() {
 
     var text = $('textarea#command').val();
@@ -5,7 +7,7 @@ function callConsole() {
         'command': text
     };
 
-    ajaxCall("POST", "http://localhost:8000/api/octave/execute?apikey=12345678910", JSON.stringify(data), callConsoleResponse)
+    ajaxCall("POST", url + "/api/octave/execute?apikey=12345678910", JSON.stringify(data), callConsoleResponse)
 }
 
 function callConsoleResponse(data) {
