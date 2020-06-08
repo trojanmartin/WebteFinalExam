@@ -12,5 +12,9 @@ return [
     'modelD' => 'Model D',
     'model' => 'Model',
     'pocet_navstev' => 'Počet návštev',
-    'nazov' => 'Názov'
+    'nazov' => 'Názov',
+    'octave_console' => 'Oktave konzola',
+    'input' => 'Vstup',
+    'response' => 'Odpoveď',
+    'execute' => 'Vykonaj'
 ];
