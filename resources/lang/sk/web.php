@@ -52,5 +52,6 @@ return [
     'name' =>  'Meno a priezvisko',
     'task' => 'Úlohy',
     'pendulum' => 'Prevrátené kyvadlo',
-    'pendulum_position' => 'Nová poloha kyvadla'
+    'pendulum_position' => 'Nová poloha kyvadla',
+    'height' => 'Výška prekážky',
 ];
