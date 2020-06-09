@@ -21,30 +21,30 @@
                 <input type="text" class="form-control" readonly value="https://wt58.fei.stuba.sk:4458/final/index.php/api/octave/ball?apikey=<hodnota>&r=<hodnota>&startPosition=<hodnota>&startSpeed=<hodnota>">        
             </div> 
 
-            <h3>Parametre</h3>
+            <h3>{{ __('web.parameters') }}</h3>
             <table class="table">
                 <thead class="thead-light">
                     <tr>
-                        <th scope="col">Argument</th>
-                        <th scope="col">Popis</th>                
+                        <th scope="col">{{ __('web.arguments') }}</th>
+                        <th scope="col">{{ __('web.description') }}</th>                
                     </tr>
                     </thead>
                     <tbody>           
-                    <tr>
+                    <tr>apikeydesc
                         <th>apikey</th>
-                        <td>Api kľúč pre pístup</td>
+                        <td>{{ __('web.apikeydesc') }}</td>
                     </tr>
                     <tr>
                         <th>r</th>
-                        <td>Nová poloha</td>
+                        <td>{{ __('web.newposition') }}</td>
                     </tr>
                     <tr>
                         <th>startPosition</th>
-                        <td>Inicializačná poloha</td>
+                        <td>{{ __('web.startposition') }}</td>
                     </tr>
                     <tr>
                         <th>startSpeed</th>
-                        <td>Počiatočná rýchlosť</td>
+                        <td>{{ __('web.startspeed') }}</td>
                     </tr>           
                 </tbody>
             </table>

@@ -35,5 +35,12 @@ return [
     'ball_position' => 'Ball position',
     'animation_render' => 'Animation render',
     'display_graph' => 'Display graph',
-    'export'=> 'Log export'
+    'export'=> 'Log export',
+    'parameters' => 'Parameters',
+    'arguments' => 'Arguments',
+    'description' => 'Description',
+    'apikeydesc' => 'Api key for acces',
+    'newposition' => 'New position',
+    'startposition' => 'Start position',
+    'startspeed' => 'Start speed'
 ];
