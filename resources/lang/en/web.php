@@ -21,7 +21,7 @@ return [
     'input' => 'Input',
     'response' => 'Response',
     'execute' => 'Execute',
-
+    'inverzne_kyvadlo' => 'Inverted Pendulum',
     'suspension' => 'Suspension',
     'obstacle' => 'Obstacle',
     'height_obstacle' => 'Insert height of obstacle',
@@ -37,4 +37,3 @@ return [
     'display_graph' => 'Display graph',
     'export'=> 'Log export'
 ];
-
