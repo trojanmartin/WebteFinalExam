@@ -48,3 +48,8 @@ Route::middleware(['statistics:model_D'])->group(function(){
 });
 
 Route::post('/sendemail','MailController@sendEmail');
+
+Route::get("octave", function(){
+     return view('octave');
+});
+

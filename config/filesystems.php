@@ -64,6 +64,10 @@ return [
             'url' => env('AWS_URL'),
             'endpoint' => env('AWS_ENDPOINT'),
         ],
+        'logs' => [
+            'driver' => 'local',
+            'root' => storage_path('logs'),
+        ],
 
     ],
 

@@ -99,6 +99,17 @@ return [
         'emergency' => [
             'path' => storage_path('logs/laravel.log'),
         ],
+
+        'request' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/requests.log'),
+            'level' => 'info',
+            'formatter' => Monolog\Formatter\LineFormatter::class,
+            'formatter_with' => [
+                'dateFormat'=>'Y-m-d H:i:s',
+                'format' => "Dátum: %datetime%, %message%\n",
+            ],
+        ],
     ],
 
 ];
