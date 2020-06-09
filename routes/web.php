@@ -25,7 +25,7 @@ Route::get('/', function(){
 
 Route::middleware(['statistics:model_A'])->group(function(){
      Route::get('ball',function(){
-         echo "ball";
+        return view('ball');
      });
 });
 

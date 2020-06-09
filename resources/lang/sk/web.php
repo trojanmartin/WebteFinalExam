@@ -4,7 +4,7 @@ return [
     'sprava' => 'Toto je správa po slovensky',
     'language' => 'Jazyk',
     'main_route' => 'Hlavná',
-    'dropdown' => 'Podstránky',
+    'dropdown' => 'Modely',
     'statistika' => 'Štatistika',
     'modelA' => 'Model A',
     'modelB' => 'Model B',
@@ -16,5 +16,6 @@ return [
     'octave_console' => 'Oktave konzola',
     'input' => 'Vstup',
     'response' => 'Odpoveď',
-    'execute' => 'Vykonaj'
+    'execute' => 'Vykonaj',
+    'ball' => 'Gulička na tyči'
 ];

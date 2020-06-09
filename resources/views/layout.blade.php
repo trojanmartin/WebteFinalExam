@@ -44,7 +44,7 @@
         {{ __('web.dropdown') }}
         </a>
         <div class="dropdown-menu red lighten-1" id="dm" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item text-white" href="#">ČOSI 1</a>
+          <a class="dropdown-item text-white" href="{{ url('ball') }}">{{ __('web.ball') }}</a>
           <a class="dropdown-item text-white" href="#">ČOSI 2</a>
           <a class="dropdown-item text-white" href="#">ČOSI 3</a>
           <a class="dropdown-item text-white" href="#">ČOSI 4</a>
@@ -84,12 +84,16 @@
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="{{ asset('md/js/mdb.min.js') }}"></script>
   <!-- Your custom scripts (optional) -->
-  <script type="text/javascript" src="{{ asset('md/js/script.js') }}"></script>
+ 
+
+  
   <script>$(function(){
     $('.selectpicker').selectpicker();
 });</script>
 @section('scripts')
+
     @show
+    <script type="text/javascript" src="{{ asset('md/js/script.js') }}"></script>
     
 </body>
 </html>

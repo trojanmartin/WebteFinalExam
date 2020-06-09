@@ -4,7 +4,7 @@ return [
     'sprava' => 'This is text in EN',
     'language' => 'Language',
     'main_route' => 'Home',
-    'dropdown' => 'Subsites',
+    'dropdown' => 'Models',
     'statistika' => 'Statistics',
     'modelA' => 'Model A',
     'modelB' => 'Model B',
@@ -16,5 +16,6 @@ return [
     'octave_console' => 'Octave console',
     'input' => 'Input',
     'response' => 'Response',
-    'execute' => 'Execute'
+    'execute' => 'Execute',
+    'ball' => 'Ball and Beam'
 ];
