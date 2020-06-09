@@ -12,5 +12,9 @@ return [
     'modelD' => 'Model D',
     'model' => 'Model',
     'pocet_navstev' => 'The number of visitors',
-    'nazov' => 'Name'
+    'nazov' => 'Name',
+    'octave_console' => 'Octave console',
+    'input' => 'Input',
+    'response' => 'Response',
+    'execute' => 'Execute'
 ];
