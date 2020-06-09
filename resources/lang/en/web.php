@@ -35,6 +35,6 @@ return [
     'animation_render' => 'Animation render',
     'display_graph' => 'Display graph',
     'pendulum' => 'Inverted Pendulum',
-    'pendulum_position' => 'New position of pendulum'
+    'pendulum_position' => 'New position of pendulum',
     'export'=> 'Log export'
 ];
