@@ -13,6 +13,10 @@ return [
     'model' => 'Model',
     'pocet_navstev' => 'The number of visitors',
     'nazov' => 'Name',
+    'pozdrav' => 'Hello',
+    'vdaka' => 'Thanks for using our website!',
+    'poslat' => 'Send',
+    'email' => 'Email Address'
     'octave_console' => 'Octave console',
     'input' => 'Input',
     'response' => 'Response',
