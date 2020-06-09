@@ -27,7 +27,7 @@
                     </tr>
                     </thead>
                     <tbody>           
-                    <tr>apikeydesc
+                    <tr>
                         <th>apikey</th>
                         <td>{{ __('web.apikeydesc') }}</td>
                     </tr>
@@ -66,7 +66,7 @@
                     </tr>
                     </thead>
                     <tbody>           
-                    <tr>apikeydesc
+                    <tr>
                         <th>apikey</th>
                         <td>{{ __('web.apikeydesc') }}</td>
                     </tr>
