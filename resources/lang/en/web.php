@@ -26,7 +26,6 @@ return [
     'obstacle' => 'Obstacle',
     'height_obstacle' => 'Insert height of obstacle',
     'show_graph' => 'Display graph',
-
     'plane_title' => 'Plane tilt',
     'new_angle' => 'Insert desired angle',
     'graph' => 'Graph',
@@ -35,5 +34,7 @@ return [
     'ball_position' => 'Ball position',
     'animation_render' => 'Animation render',
     'display_graph' => 'Display graph',
+    'pendulum' => 'Inverted Pendulum',
+    'pendulum_position' => 'New position of pendulum'
     'export'=> 'Log export'
 ];
