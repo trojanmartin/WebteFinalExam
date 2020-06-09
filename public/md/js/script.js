@@ -4,22 +4,8 @@ const url = "http://localhost:8000";
 let ballIndex = 1;
 let maxIndex = 0;
 let x = 0;
-let lastPosition;
-let lastAngle;
-
-$('#horizontal_sl').slider({
-    formatter: function(value) {
-        return 'Čas: ' + value;
-    }
-
-});
-
-$("#horizontal_sl").on("slideStart", function(slideEvt) {
-    $("#horizontal_sl_value").val(slideEvt.value);
-});
-$("#horizontal_sl").on("slide", function(slideEvt) {
-    $("#horizontal_sl_value").val(slideEvt.value);
-});
+let lastPosition = 0;
+let lastAngle = 0;
 
 
 Plotly.newPlot('g', [{
@@ -69,25 +55,29 @@ function getDataForBall() {
 
 function ballDataResponse(data) {
 
-    lastPosition = data.position[maxIndex];
-    lastAngle = data.angle[maxIndex];
+    var checkbox = $('#graphCheck');
+    if ($("#graphCheck").is(':checked')) {
+        lastPosition = data.position[maxIndex];
+        lastAngle = data.angle[maxIndex];
 
-    maxIndex = data.position.length
-    var duration = $('#horizontal_sl_value').val();
-    var interval = duration / maxIndex;
+        maxIndex = data.position.length
+        var duration = $('#horizontal_sl_value').val();
+        var interval = duration / maxIndex;
 
-    var interval = window.setInterval(function() {
-        if (ballIndex == maxIndex)
-            clearInterval(interval);
+        var interval = window.setInterval(function() {
+            if (ballIndex == maxIndex) {
+                clearInterval(interval);
+                ballIndex = 1;
+            } else {
+                var a = Number((data.angle[ballIndex]));
+                var angle = a.toPrecision(10);
 
-        else {
-            var a = Number((data.angle[ballIndex]));
-            var angle = a.toPrecision(10);
+                animate(data.position[ballIndex], angle, data.time[ballIndex]);
+                ballIndex += 1;
+            }
+        }, 0.00001);
 
-            animate(data.position[ballIndex], angle, data.time[ballIndex]);
-            ballIndex += 1;
-        }
-    }, interval);
+    }
 }
 
 

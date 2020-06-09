@@ -22,5 +22,8 @@ return [
     'response' => 'Response',
     'execute' => 'Execute',
     'vloz_email' => 'Enter Email',
-    'ball' => 'Ball and Beam'
+    'ball' => 'Ball and Beam',
+    'ball_position' => 'Ball position',
+    'animation_render' => 'Animation render',
+    'display_graph' => 'Display graph'
 ];

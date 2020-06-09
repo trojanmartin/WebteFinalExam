@@ -22,5 +22,8 @@ return [
     'response' => 'Odpoveď',
     'execute' => 'Vykonaj',
     'vloz_email' => 'Vlož email',
-    'ball' => 'Gulička na tyči'
+    'ball' => 'Gulička na tyči',
+    'ball_position' => 'Pozícia loptičky',
+    'animation_render' => 'Zobraz animáciu',
+    'display_graph' => 'Zobraz graf'
 ];
