@@ -55,14 +55,10 @@ function getDataForBall() {
 
 function ballDataResponse(data) {
 
-    var checkbox = $('#graphCheck');
     if ($("#graphCheck").is(':checked')) {
+        maxIndex = data.position.length
         lastPosition = data.position[maxIndex];
         lastAngle = data.angle[maxIndex];
-
-        maxIndex = data.position.length
-        var duration = $('#horizontal_sl_value').val();
-        var interval = duration / maxIndex;
 
         var interval = window.setInterval(function() {
             if (ballIndex == maxIndex) {

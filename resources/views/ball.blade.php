@@ -19,7 +19,7 @@
             <form>
                 <div class="form-group">
                     <label for="r">{{ __('web.ball_position') }}</label>
-                    <input class="form-control"  type="number" name="r" id="r" placeholder="Zadajte novú polohu guličky">               
+                    <input class="form-control"  type="number" name="r" id="r" require placeholder="Zadajte novú polohu guličky">               
                 </div> 
               
 
