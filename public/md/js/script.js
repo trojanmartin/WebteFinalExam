@@ -6,29 +6,33 @@ let maxIndex = 0;
 let x = 0;
 let lastPosition = 0;
 let lastAngle = 0;
+let lastX = 0;
 
 
-Plotly.newPlot('g', [{
-    x: [0],
-    y: [0],
-    type: 'line',
-    name: 'position',
-    line: {
-        color: 'rgb(0,0,255)',
-        width: 2
-    }
-}], {});
+function createGraph() {
 
-Plotly.plot("g", [{
-    x: [0],
-    y: [0],
-    type: 'line',
-    name: 'angle',
-    line: {
-        color: 'rgb(255,0,0)',
-        width: 2
-    }
-}]);
+    Plotly.newPlot('g', [{
+        x: [0],
+        y: [0],
+        type: 'line',
+        name: 'position',
+        line: {
+            color: 'rgb(0,0,255)',
+            width: 2
+        }
+    }], {});
+
+    Plotly.plot("g", [{
+        x: [0],
+        y: [0],
+        type: 'line',
+        name: 'angle',
+        line: {
+            color: 'rgb(255,0,0)',
+            width: 2
+        }
+    }]);
+}
 
 
 
@@ -57,25 +61,26 @@ function ballDataResponse(data) {
 
     if ($("#graphCheck").is(':checked')) {
         maxIndex = data.position.length
-        lastPosition = data.position[maxIndex];
-        lastAngle = data.angle[maxIndex];
+        lastPosition = data.position[maxIndex - 1];
+        lastAngle = data.angle[maxIndex - 1];
 
+        createGraph();
         var interval = window.setInterval(function() {
             if (ballIndex == maxIndex) {
                 clearInterval(interval);
                 ballIndex = 1;
+                lastX = data.time[maxIndex - 1];
+
             } else {
                 var a = Number((data.angle[ballIndex]));
                 var angle = a.toPrecision(10);
-
-                animate(data.position[ballIndex], angle, data.time[ballIndex]);
+                var time = Number(data.time[ballIndex]) + Number(lastX);
+                animate(data.position[ballIndex], angle, time);
                 ballIndex += 1;
             }
         }, 0.00001);
-
     }
 }
-
 
 function animate(position, angle, x) {
     Plotly.extendTraces("g", {
@@ -95,11 +100,7 @@ function animate(position, angle, x) {
             [x]
         ]
     }, [1]);
-
-
-
 }
-
 
 function ajaxCall(type, uri, data, callback) {
     $.ajax({
