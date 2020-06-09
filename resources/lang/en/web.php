@@ -16,9 +16,10 @@ return [
     'pozdrav' => 'Hello',
     'vdaka' => 'Thanks for using our website!',
     'poslat' => 'Send',
-    'email' => 'Email Address'
+    'email' => 'Email Address',
     'octave_console' => 'Octave console',
     'input' => 'Input',
     'response' => 'Response',
-    'execute' => 'Execute'
+    'execute' => 'Execute',
+    'vloz_email' => 'Enter Email'
 ];
