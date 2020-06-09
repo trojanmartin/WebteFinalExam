@@ -26,13 +26,8 @@
                         <th scope="col">{{ __('web.description') }}</th>
                     </tr>
                     </thead>
-<<<<<<< HEAD
-                    <tbody>           
-                    <tr>
-=======
                     <tbody>
-                    <tr>apikeydesc
->>>>>>> 241eadfb01f69158b42589a6890c86e967f49482
+                    <tr>
                         <th>apikey</th>
                         <td>{{ __('web.apikeydesc') }}</td>
                     </tr>
@@ -70,7 +65,7 @@
                         <th scope="col">{{ __('web.description') }}</th>
                     </tr>
                     </thead>
-                    <tbody>           
+                    <tbody>
                     <tr>
                         <th>apikey</th>
                         <td>{{ __('web.apikeydesc') }}</td>
@@ -89,18 +84,18 @@
             <h2>{{ __('web.plane_title') }}</h2>
             <div class="form-group">
                 <label for="url"></label>
-                <input type="text" class="form-control" readonly value="https://wt58.fei.stuba.sk:4458/final/index.php/api/octave/plane?apikey=<hodnota>&r=<hodnota>">        
-            </div> 
+                <input type="text" class="form-control" readonly value="https://wt58.fei.stuba.sk:4458/final/index.php/api/octave/plane?apikey=<hodnota>&r=<hodnota>">
+            </div>
 
             <h3>{{ __('web.parameters') }}</h3>
             <table class="table">
                 <thead class="thead-light">
                     <tr>
                         <th scope="col">{{ __('web.arguments') }}</th>
-                        <th scope="col">{{ __('web.description') }}</th>                
+                        <th scope="col">{{ __('web.description') }}</th>
                     </tr>
                     </thead>
-                    <tbody>           
+                    <tbody>
                     <tr>
                         <th>apikey</th>
                         <td>{{ __('web.apikeydesc') }}</td>
@@ -108,7 +103,7 @@
                     <tr>
                         <th>r</th>
                         <td>{{ __('web.newposition') }}</td>
-                    </tr>         
+                    </tr>
                 </tbody>
             </table>
         </div>
@@ -119,18 +114,18 @@
             <h2>{{ __('web.inverzne_kyvadlo') }}</h2>
             <div class="form-group">
                 <label for="url"></label>
-                <input type="text" class="form-control" readonly value="https://wt58.fei.stuba.sk:4458/final/index.php/api/octave/inverted_pendulum?apikey=<hodnota>&r=<hodnota>">        
-            </div> 
+                <input type="text" class="form-control" readonly value="https://wt58.fei.stuba.sk:4458/final/index.php/api/octave/inverted_pendulum?apikey=<hodnota>&r=<hodnota>">
+            </div>
 
             <h3>{{ __('web.parameters') }}</h3>
             <table class="table">
                 <thead class="thead-light">
                     <tr>
                         <th scope="col">{{ __('web.arguments') }}</th>
-                        <th scope="col">{{ __('web.description') }}</th>                
+                        <th scope="col">{{ __('web.description') }}</th>
                     </tr>
                     </thead>
-                    <tbody>           
+                    <tbody>
                     <tr>
                         <th>apikey</th>
                         <td>{{ __('web.apikeydesc') }}</td>
@@ -138,7 +133,7 @@
                     <tr>
                         <th>r</th>
                         <td>{{ __('web.newposition') }}</td>
-                    </tr>         
+                    </tr>
                 </tbody>
             </table>
         </div>
