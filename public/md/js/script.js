@@ -79,10 +79,8 @@ function ballDataResponse(data) {
                 ballIndex += 1;
             }
         }, 0.00001);
-
     }
 }
-
 
 function animate(position, angle, x) {
     Plotly.extendTraces("g", {
@@ -102,11 +100,7 @@ function animate(position, angle, x) {
             [x]
         ]
     }, [1]);
-
-
-
 }
-
 
 function ajaxCall(type, uri, data, callback) {
     $.ajax({
