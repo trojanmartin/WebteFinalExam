@@ -16,5 +16,8 @@ return [
     'octave_console' => 'Oktave konzola',
     'input' => 'Vstup',
     'response' => 'Odpoveď',
-    'execute' => 'Vykonaj'
+    'execute' => 'Vykonaj',
+    'plane_title' => 'Náklon lietadla',
+    'new_angle' => 'Zadajte požadovaný uhol',
+    'graph' => 'Graf'
 ];

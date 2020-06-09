@@ -16,5 +16,8 @@ return [
     'octave_console' => 'Octave console',
     'input' => 'Input',
     'response' => 'Response',
-    'execute' => 'Execute'
+    'execute' => 'Execute',
+    'plane_title' => 'Plane tilt',
+    'new_angle' => 'Insert desired angle',
+    'graph' => 'Graph'
 ];

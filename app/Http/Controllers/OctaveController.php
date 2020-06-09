@@ -109,8 +109,7 @@ class OctaveController extends Controller
         $query = ($request->query());
 
         $r = $query["r"];
-        $startPosition = $query["startPosition"];
-        $startSpeed = $query["startSpeed"];
+       
 
         $command = $this->get_plane_script($r);
 
@@ -164,7 +163,8 @@ class OctaveController extends Controller
         [y,t,x]=lsim(sys,r*ones(size(t)),t,[initAlfa;initQ;initTheta]);
         x(:,3)
         r*ones(size(t))*N-x*K'
-        t(:)";
+        t(:)
+        ";
 
     }
 

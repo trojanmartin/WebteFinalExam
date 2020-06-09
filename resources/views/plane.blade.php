@@ -12,20 +12,20 @@
 <div class="row">
   <div class="col-md-12">
   <br />
-  <h3>DSSADSA</h3>
+  <h3>{{ __('web.plane_title') }}</h3>
   <br />
     <div class="row">
 
         <div class="col-4">
             <form>
                 <div class="form-group">
-                    <label for="r">Nový uhol lietadla</label>
+                    <label for="r">{{ __('web.new_angle') }}</label>
                     <input class="form-control"  type="number" name="r" id="r" placeholder="Zadajte nový uhol lietadla">               
                 </div> 
 
                 <div class="form-check">                
                     <input class="form-check-input" id="graphCheck" type="checkbox" name="graph">     
-                    <label class="form-check-label" for="checkbox">NEVIEM</label>          
+                    <label class="form-check-label" for="checkbox">{{ __('web.graph') }}</label>          
                 </div>  
       
                 <a type="submit" onclick="getDataForPlane()" class="btn btn-primary float-left">Submit</a>
