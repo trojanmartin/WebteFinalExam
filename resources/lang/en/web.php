@@ -53,6 +53,7 @@ return [
     'name' =>  'Name and surname',
     'task' => 'Tasks',
     'pendulum' => 'Inverted Pendulum',
-    'pendulum_position' => 'New position of pendulum'
+    'pendulum_position' => 'New position of pendulum',
+    'height' => 'Height of obstacle',
 
 ];
