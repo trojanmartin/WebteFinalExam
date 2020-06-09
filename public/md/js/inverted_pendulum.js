@@ -1,4 +1,3 @@
-const url = "https://wt58.fei.stuba.sk:4458/final";
 let position = 0;
 let angle = 0;
 let invertedPendulumIndex = 1;
@@ -16,9 +15,7 @@ function getInvertedPendulumResponse(data) {
 
         position = data.position[maxIndex];
         angle = data.angle[maxIndex];
-
         maxIndex = data.position.length;
-
 
         var interval = window.setInterval(function() {
             if (invertedPendulumIndex == maxIndex) {
@@ -28,7 +25,7 @@ function getInvertedPendulumResponse(data) {
                 var a = Number((data.angle[invertedPendulumIndex]));
                 var angle = a.toPrecision(10);
 
-                animate(data.position[invertedPendulumIndex], angle, data.time[invertedPendulumIndex]);
+                extendGraph(data.position[invertedPendulumIndex], angle, data.time[invertedPendulumIndex]);
                 invertedPendulumIndex += 1;
             }
         }, 0.00001);

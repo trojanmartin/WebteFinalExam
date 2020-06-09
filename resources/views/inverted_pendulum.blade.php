@@ -40,7 +40,7 @@
 
   <div class="row">
   <div class="col-12">
-            <div id="graph" style="width:1200px;height:500;">
+            <div id="graphInvertedPendulum" style="width:1200px;height:500;">
             </div>
         </div>       
   </div>
@@ -52,5 +52,5 @@
 
 @section('scripts')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.2/bootstrap-slider.min.js "></script>
-
+<script type="text/javascript" src="{{ asset('md/js/inverted_pendulum.js') }}"></script>
 @endsection
