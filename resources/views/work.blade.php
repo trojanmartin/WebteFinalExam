@@ -3,13 +3,13 @@
 @section('content')
 
 <div class="container">
-    <h2>Checklist splnených úloh</h2>
+    <h2>{{ __('web.checklist') }}</h2>
     <table class="table table-hover">
         <thead>
             <tr>
                 <th></th>
-                <th>Meno a Priezvisko</th>
-                <th>Úloha</th>
+                <th>{{ __('web.name') }}</th>
+                <th>{{ __('web.task') }}</th>
             </tr>
         </thead>
         <tbody>
@@ -21,7 +21,7 @@
                     </div>
                 </td>
                 <td>Jakub Trstenský</td>
-                <td>Štatistika</td>
+                <td>{{ __('web.statistika') }}</td>
             </tr>
             <tr>
                 <td>
@@ -31,7 +31,7 @@
                     </div>
                 </td>
                 <td>Jakub Trstenský</td>
-                <td>Mail</td>
+                <td>{{ __('web.email') }}</td>
             </tr>
             <tr>
                 <td>
@@ -41,7 +41,7 @@
                     </div>
                 </td>
                 <td>Jakub Trstenský</td>
-                <td>Kyvadlo</td>
+                <td>{{ __('web.inverzne_kyvadlo') }}</td>
             </tr>
             <tr>
                 <td>
@@ -51,7 +51,7 @@
                     </div>
                 </td>
                 <td>Martin Trojan</td>
-                <td>Základná architektúra</td>
+                <td>{{ __('web.architecture') }}</td>
             </tr>
             <tr>
                 <td>
@@ -61,7 +61,7 @@
                     </div>
                 </td>
                 <td>Martin Trojan</td>
-                <td>Zabezpečenie API</td>
+                <td>{{ __('web.secureAPI') }}</td>
             </tr>
             <tr>
                 <td>
@@ -71,7 +71,7 @@
                     </div>
                 </td>
                 <td>Martin Trojan</td>
-                <td>Gulička na tyči</td>
+                <td>{{ __('web.ball') }}</td>
             </tr>
             <tr>
                 <td>
@@ -81,7 +81,7 @@
                     </div>
                 </td>
                 <td>Patrik Smolár</td>
-                <td>Grafické spracovanie</td>
+                <td>{{ __('web.graphics') }}</td>
             </tr>
             <tr>
                 <td>
@@ -91,7 +91,7 @@
                     </div>
                 </td>
                 <td>Patrik Smolár</td>
-                <td>Jazyky</td>
+                <td>{{ __('web.languages') }}</td>
             </tr>
             <tr>
                 <td>
@@ -101,7 +101,7 @@
                     </div>
                 </td>
                 <td>Patrik Smolár</td>
-                <td>Náklon lietadla</td>
+                <td>{{ __('web.plane_title') }}</td>
             </tr>
             <tr>
                 <td>
@@ -131,7 +131,7 @@
                     </div>
                 </td>
                 <td>Maroš Kovaľák</td>
-                <td>Tlmič</td>
+                <td>{{ __('web.suspension') }}</td>
             </tr>
         </tbody>
     </table>

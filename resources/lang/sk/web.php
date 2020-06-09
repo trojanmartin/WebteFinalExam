@@ -35,6 +35,22 @@ return [
     'animation_render' => 'Zobraz animáciu',
     'display_graph' => 'Zobraz graf',
     'export'=> 'Exportovanie logu',
+    'parameters' => 'Parametre',
+    'arguments' => 'Argumenty',
+    'description' => 'Popis',
+    'apikeydesc' => 'Api kľúč pre pístup',
+    'newposition' => 'Nová pozícia',
+    'startposition' => 'Štartovacia pozícia',
+    'startspeed' => 'Štartovacia rýchlosť'
+    'work' => 'Práca',
+    'documentation' => 'Dokumentácia',
+    'architecture' => 'Základná architektúra',
+    'secureAPI' => 'Zabezpečenie API',
+    'graphics' => 'Grafické spracovanie',
+    'languages' => 'Jazyky',
+    'checklist' => 'Checklist splnených úloh',
+    'name' =>  'Meno a priezvisko',
+    'task' => 'Úlohy'
     'pendulum' => 'Prevrátené kyvadlo',
     'pendulum_position' => 'Nová poloha kyvadla'
 ];
