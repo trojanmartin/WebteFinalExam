@@ -3,11 +3,37 @@ let position = 0;
 let angle = 0;
 let invertedPendulumIndex = 1;
 let maxIndex = 0;
+let interval;
 
 function getDataForInvertedPendulum() {
     r = $('input#r').val();
+    invertedPendulumIndex = 1;
+    maxIndex = 0;
 
-    ajaxCall("GET", url + "/api/octave/inverted_pendulum?apikey=12345678910" + "&r=" + r + "&position=" + position + "&angle=" + angle, "", getInvertedPendulumResponse);
+    clearInterval(interval);
+
+    Plotly.newPlot('graphInvertedPendulum', [{
+        x: [0],
+        y: [0],
+        type: 'line',
+        name: 'position',
+        line: {
+            color: 'rgb(0,255,0)',
+            width: 2
+        }
+    }], {});
+
+    Plotly.plot("graphInvertedPendulum", [{
+        x: [0],
+        y: [0],
+        type: 'line',
+        name: 'angle',
+        line: {
+            color: 'rgb(255,0,0)',
+            width: 2
+        }
+    }]);
+    ajaxCall("GET", url + "/api/octave/inverted_pendulum?apikey=12345678910" + "&r=" + r, "", getInvertedPendulumResponse);
 }
 
 function getInvertedPendulumResponse(data) {
@@ -18,7 +44,7 @@ function getInvertedPendulumResponse(data) {
         angle = data.angle[maxIndex];
         maxIndex = data.position.length;
 
-        var interval = window.setInterval(function() {
+        interval = window.setInterval(function() {
             if (invertedPendulumIndex == maxIndex) {
                 clearInterval(interval);
                 invertedPendulumIndex = 1;
@@ -32,28 +58,6 @@ function getInvertedPendulumResponse(data) {
         }, 0.00001);
     }
 }
-
-Plotly.newPlot('graphInvertedPendulum', [{
-    x: [0],
-    y: [0],
-    type: 'line',
-    name: 'position',
-    line: {
-        color: 'rgb(0,255,0)',
-        width: 2
-    }
-}], {});
-
-Plotly.plot("graphInvertedPendulum", [{
-    x: [0],
-    y: [0],
-    type: 'line',
-    name: 'angle',
-    line: {
-        color: 'rgb(255,0,0)',
-        width: 2
-    }
-}]);
 
 function extendGraph(position, angle, x) {
     Plotly.extendTraces("graphInvertedPendulum", {

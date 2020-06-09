@@ -262,9 +262,7 @@ class OctaveController extends Controller
         $query = ($request->query());
 
         $rFromQuery = $query["r"];
-        $positionFromQuery = $query["position"];
-        $angleFromQuery = $query["angle"];
-
+        
         $command = $this->get_invertedPendulum_script($rFromQuery,$positionFromQuery,$angleFromQuery);
 
         $response = trim(shell_exec('octave --no-gui --quiet --eval "pkg load control;'. $command .'"'));
@@ -292,7 +290,7 @@ class OctaveController extends Controller
         }
     }
 
-    private function get_invertedPendulum_script($r,$position,$angle)
+    private function get_invertedPendulum_script($r)
     {
         return "
         M = .5;
@@ -314,8 +312,8 @@ class OctaveController extends Controller
         
         t = 0:0.05:10;
         r =". $r . ";
-        initPozicia=". $position .";
-        initUhol=" . $angle .";
+        initPozicia=0;
+        initUhol=0;
         [y,t,x]=lsim(sys,r*ones(size(t)),t,[initPozicia;0;initUhol;0]);
         plot(t,y)
         
