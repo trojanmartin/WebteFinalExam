@@ -35,6 +35,15 @@ return [
     'animation_render' => 'Animation render',
     'display_graph' => 'Display graph',
     'export'=> 'Log export',
+    'work' => 'Work',
+    'documentation' => 'Documentation',
+    'architecture' => 'Architecture of the apllication',
+    'secureAPI' => 'API securitry',
+    'graphics' => 'Graphic layout',
+    'languages' => 'Languages',
+    'checklist' => 'Checklist of completed tasks',
+    'name' =>  'Name and surname',
+    'task' => 'Tasks'
     'pendulum' => 'Inverted Pendulum',
     'pendulum_position' => 'New position of pendulum'
 
