@@ -41,7 +41,7 @@ return [
     'apikeydesc' => 'Api kľúč pre pístup',
     'newposition' => 'Nová pozícia',
     'startposition' => 'Štartovacia pozícia',
-    'startspeed' => 'Štartovacia rýchlosť'
+    'startspeed' => 'Štartovacia rýchlosť',
     'work' => 'Práca',
     'documentation' => 'Dokumentácia',
     'architecture' => 'Základná architektúra',
@@ -50,7 +50,8 @@ return [
     'languages' => 'Jazyky',
     'checklist' => 'Checklist splnených úloh',
     'name' =>  'Meno a priezvisko',
-    'task' => 'Úlohy'
+    'task' => 'Úlohy',
     'pendulum' => 'Prevrátené kyvadlo',
-    'pendulum_position' => 'Nová poloha kyvadla'
+    'pendulum_position' => 'Nová poloha kyvadla',
+    'height' => 'Výška prekážky',
 ];

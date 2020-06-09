@@ -15,18 +15,18 @@
             <h2>{{ __('web.ball') }}</h2>
             <div class="form-group">
                 <label for="url"></label>
-                <input type="text" class="form-control" readonly value="https://wt58.fei.stuba.sk:4458/final/index.php/api/octave/ball?apikey=<hodnota>&r=<hodnota>&startPosition=<hodnota>&startSpeed=<hodnota>">        
-            </div> 
+                <input type="text" class="form-control" readonly value="https://wt58.fei.stuba.sk:4458/final/index.php/api/octave/ball?apikey=<hodnota>&r=<hodnota>&startPosition=<hodnota>&startSpeed=<hodnota>">
+            </div>
 
             <h3>{{ __('web.parameters') }}</h3>
             <table class="table">
                 <thead class="thead-light">
                     <tr>
                         <th scope="col">{{ __('web.arguments') }}</th>
-                        <th scope="col">{{ __('web.description') }}</th>                
+                        <th scope="col">{{ __('web.description') }}</th>
                     </tr>
                     </thead>
-                    <tbody>           
+                    <tbody>
                     <tr>apikeydesc
                         <th>apikey</th>
                         <td>{{ __('web.apikeydesc') }}</td>
@@ -42,7 +42,7 @@
                     <tr>
                         <th>startSpeed</th>
                         <td>{{ __('web.startspeed') }}</td>
-                    </tr>           
+                    </tr>
                 </tbody>
             </table>
         </div>
@@ -51,37 +51,29 @@
 
     <div class="row">
         <div class="col-12">
-            <h2>Gulička na tyči</h2>
+            <h2>{{ __('web.suspension') }}</h2>
             <div class="form-group">
                 <label for="url"></label>
-                <input type="text" class="form-control" readonly value="https://wt58.fei.stuba.sk:4458/final/index.php/api/octave/ball?apikey=<hodnota>&r=<hodnota>&startPosition=<hodnota>&startSpeed=<hodnota>">        
-            </div> 
+                <input type="text" class="form-control" readonly value="https://wt58.fei.stuba.sk:4458/final/index.php/api/octave/suspension?apikey=<hodnota>&r=<hodnota>">
+            </div>
 
             <h3>{{ __('web.parameters') }}</h3>
             <table class="table">
                 <thead class="thead-light">
                     <tr>
                         <th scope="col">{{ __('web.arguments') }}</th>
-                        <th scope="col">{{ __('web.description') }}</th>                
+                        <th scope="col">{{ __('web.description') }}</th>
                     </tr>
                     </thead>
-                    <tbody>           
+                    <tbody>
                     <tr>apikeydesc
                         <th>apikey</th>
                         <td>{{ __('web.apikeydesc') }}</td>
                     </tr>
                     <tr>
                         <th>r</th>
-                        <td>{{ __('web.newposition') }}</td>
+                        <td>{{ __('web.height') }}</td>
                     </tr>
-                    <tr>
-                        <th>startPosition</th>
-                        <td>{{ __('web.startposition') }}</td>
-                    </tr>
-                    <tr>
-                        <th>startSpeed</th>
-                        <td>{{ __('web.startspeed') }}</td>
-                    </tr>           
                 </tbody>
             </table>
         </div>
