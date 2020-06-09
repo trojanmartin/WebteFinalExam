@@ -16,5 +16,10 @@ return [
     'octave_console' => 'Oktave konzola',
     'input' => 'Vstup',
     'response' => 'Odpoveď',
-    'execute' => 'Vykonaj'
+    'execute' => 'Vykonaj',
+
+    'suspension' => 'Tlmič',
+    'obstacle' => 'Prekážka',
+    'height_obstacle' => 'Zadajte výšku prekážky',
+    'show_graph' => 'Zobraznie grafu'
 ];

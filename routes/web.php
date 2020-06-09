@@ -17,7 +17,7 @@ Route::get('locale/{locale}', function ($locale){
      Session::put('locale', $locale);
      return redirect()->back();
  });
- 
+
 Route::get('/', function(){
      $stat = Statistics::all();
      return view('statistic',['stat'=>$stat]);
@@ -36,8 +36,8 @@ Route::middleware(['statistics:model_B'])->group(function(){
 });
 
 Route::middleware(['statistics:model_C'])->group(function(){
-     Route::get('cosi3',function(){
-          echo "cosi3";
+     Route::get('suspension',function(){
+          return view('suspension');
      });
 });
 
@@ -50,3 +50,4 @@ Route::middleware(['statistics:model_D'])->group(function(){
 Route::get("octave", function(){
      return view('octave');
 });
+

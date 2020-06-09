@@ -16,5 +16,10 @@ return [
     'octave_console' => 'Octave console',
     'input' => 'Input',
     'response' => 'Response',
-    'execute' => 'Execute'
+    'execute' => 'Execute',
+
+    'suspension' => 'Suspension',
+    'obstacle' => 'Obstacle',
+    'height_obstacle' => 'Insert height of obstacle',
+    'show_graph' => 'Display graph'
 ];
