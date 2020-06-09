@@ -135,6 +135,7 @@ class OctaveController extends Controller
 
     public function get_inverted_pendulum_data(Request $request)
     {
+        
         try {
            
         $query = ($request->query());

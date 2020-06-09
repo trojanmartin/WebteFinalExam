@@ -1,5 +1,7 @@
 let position = 0;
 let angle = 0;
+let invertedPendulumIndex = 1;
+let maxIndex = 0;
 
 function getData() {
     r = $('input#r').val();
@@ -12,6 +14,24 @@ function getInvertedPendulumResponse(data) {
     checkBox = document.getElementById('checkBoxForGraph').checked;
     if (checkBox == true) {
 
+        position = data.position[maxIndex];
+        angle = data.angle[maxIndex];
+
+        maxIndex = data.position.length;
+
+
+        var interval = window.setInterval(function() {
+            if (invertedPendulumIndex == maxIndex) {
+                clearInterval(interval);
+                invertedPendulumIndex = 1;
+            } else {
+                var a = Number((data.angle[invertedPendulumIndex]));
+                var angle = a.toPrecision(10);
+
+                animate(data.position[invertedPendulumIndex], angle, data.time[invertedPendulumIndex]);
+                invertedPendulumIndex += 1;
+            }
+        }, 0.00001);
     }
 }
 
