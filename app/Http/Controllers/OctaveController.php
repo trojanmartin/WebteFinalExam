@@ -57,6 +57,10 @@ class OctaveController extends Controller
 
         $command = $this->get_ball_script($r,$startPosition,$startSpeed);
 
+        $logCommand = $command;
+        $log = new LogRequest($logCommand, "OK");
+        $log->save();
+
         $response = trim(shell_exec('octave --no-gui --quiet --eval "pkg load control;'. $command .'"'));
 
 
@@ -70,7 +74,7 @@ class OctaveController extends Controller
 	    $alfa = array_map('trim',$alfa);
 
 
-    	$time = array_map('trim', $time);     
+    	$time = array_map('trim', $time);
 
         $return = array(
             "position" => $position,
@@ -78,13 +82,15 @@ class OctaveController extends Controller
 	        "time" => $time
         );
 
-    
+
 
 
         return json_encode($return);
         } catch (\Throwable $th) {
+            $log = new LogRequest($logCommand, "Error", "500 Internal Server Error");
+            $log->save();
 //throw $th;
-  	 return response("Error",500);
+  	        return response("Error",500);
         }
 
 
@@ -194,20 +200,23 @@ class OctaveController extends Controller
 
     public function get_plane_data(Request $request)
     {
-        
+
         try {
-           
+
         $query = ($request->query());
 
         $r = $query["r"];
-       
+
 
         $command = $this->get_plane_script($r);
+        $logCommand = $command;
+        $log = new LogRequest($logCommand, "OK");
+        $log->save();
 
         $response = trim(shell_exec('octave --no-gui --quiet --eval "pkg load control;'. $command .'"'));
 
 
-        $parsed = explode("ans =",$response);		
+        $parsed = explode("ans =",$response);
 
         $lietadlo = explode('  ',$parsed[1]);
         $klapka = explode('  ',$parsed[2]);
@@ -216,7 +225,7 @@ class OctaveController extends Controller
 	    $lietadlo = array_map('trim', $lietadlo);
         $klapka = array_map('trim',$klapka);
         $time = array_map('trim',$time);
-       
+
         $return = array(
             "naklonLietadla" => $lietadlo,
             "naklonKlapky" => $klapka,
@@ -225,8 +234,11 @@ class OctaveController extends Controller
 
         return json_encode($return);
         } catch (\Throwable $th) {
-//throw $th;         
-  	 return response("Error",500);
+            $log = new LogRequest($logCommand, "Error", "500 Internal Server Error");
+            $log->save();
+//throw $th;
+       return response("Error",500);
+
         }
 
 
