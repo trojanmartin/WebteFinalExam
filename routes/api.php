@@ -21,3 +21,7 @@ Route::get('octave/ball','OctaveController@get_ball_data');
 Route::post('octave/execute','OctaveController@execute_octave_command');
 
 Route::get('octave/suspension', 'OctaveController@get_suspension_data');
+
+Route::get('octave/plane','OctaveController@get_plane_data');
+
+

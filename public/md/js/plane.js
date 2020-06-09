@@ -1,18 +1,13 @@
 const url = "http://localhost:8000";
 
-
 let ballIndex = 1;
 let maxIndex = 0;
-let x = 0;
-let lastPosition = 0;
-let lastAngle = 0;
-
 
 Plotly.newPlot('g', [{
     x: [0],
     y: [0],
     type: 'line',
-    name: 'position',
+    name: 'klapka',
     line: {
         color: 'rgb(0,0,255)',
         width: 2
@@ -23,7 +18,7 @@ Plotly.plot("g", [{
     x: [0],
     y: [0],
     type: 'line',
-    name: 'angle',
+    name: 'lietadlo',
     line: {
         color: 'rgb(255,0,0)',
         width: 2
@@ -32,52 +27,34 @@ Plotly.plot("g", [{
 
 
 
-function callConsole() {
-
-    var text = $('textarea#command').val();
-    var data = {
-        'command': text
-    };
-
-    ajaxCall("POST", url + "/api/octave/execute?apikey=12345678910", JSON.stringify(data), callConsoleResponse)
-}
-
-function callConsoleResponse(data) {
-    $('textarea#response').val(data.result);
-}
-
-function getDataForBall() {
+function getDataForPlane() {
     r = $('input#r').val();
 
-    ajaxCall("GET", url + "/api/octave/ball?apikey=12345678910&r=" + r + "&startPosition=" + lastPosition + "&startSpeed=" + lastAngle, "", ballDataResponse)
+    ajaxCall("GET", url + "/api/octave/plane?apikey=12345678910&r=" + r, "", planeDataResponse);
 }
 
 
-function ballDataResponse(data) {
+function planeDataResponse(data) {
 
-    var checkbox = $('#graphCheck');
     if ($("#graphCheck").is(':checked')) {
-        lastPosition = data.position[maxIndex];
-        lastAngle = data.angle[maxIndex];
 
-        maxIndex = data.position.length
-        var duration = $('#horizontal_sl_value').val();
-        var interval = duration / maxIndex;
-
+        maxIndex = data.naklonLietadla.length
         var interval = window.setInterval(function() {
             if (ballIndex == maxIndex) {
                 clearInterval(interval);
                 ballIndex = 1;
             } else {
-                var a = Number((data.angle[ballIndex]));
+                var a = Number((data.naklonLietadla[ballIndex]));
                 var angle = a.toPrecision(10);
 
-                animate(data.position[ballIndex], angle, data.time[ballIndex]);
+                animate(data.naklonKlapky[ballIndex], data.naklonLietadla[ballIndex], data.time[ballIndex]);
                 ballIndex += 1;
             }
         }, 0.00001);
 
     }
+
+
 }
 
 
