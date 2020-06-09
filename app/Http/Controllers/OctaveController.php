@@ -52,15 +52,19 @@ class OctaveController extends Controller
 
         $parsed = explode("ans =",$response);		
 
+	var_dump($parsed);
+
         $position = explode('  ',$parsed[1]);
         $alfa = explode('  ',$parsed[2]);
+	$time = explode('  ',$parsed[3]);
 
 	$position = array_map('trim', $position);
 	$alfa = array_map('trim',$alfa);
-       
+  	$time = array_map('trim', $time);     
         $return = array(
             "position" => $position,
-            "angle" => $alfa
+            "angle" => $alfa,
+	    "time" => $time
         );
 
         return json_encode($return);
@@ -98,6 +102,7 @@ class OctaveController extends Controller
                 [y,t,x]=lsim(N*sys,r*ones(size(t)),t,[initPozicia;0;initRychlost;0]);
                 N*x(:,1)
                 x(:,3)
+		t(:)
                 ";
     }
 }
