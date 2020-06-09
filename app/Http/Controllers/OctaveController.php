@@ -278,7 +278,7 @@ class OctaveController extends Controller
         $command = $this->get_invertedPendulum_script($rFromQuery);
 
         $response = trim(shell_exec('octave --no-gui --quiet --eval "pkg load control;'. $command .'"'));
-        var_dump($response);
+      
         $parsed = explode("ans =",$response);		
 
         $positionTmp = explode('  ',$parsed[1]);
