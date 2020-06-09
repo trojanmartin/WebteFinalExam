@@ -100,4 +100,67 @@ class OctaveController extends Controller
                 x(:,3)
                 ";
     }
+
+    public function get_plane_data(Request $request)
+    {
+        try {
+           
+        $query = ($request->query());
+
+        $r = $query["r"];
+        $startPosition = $query["startPosition"];
+        $startSpeed = $query["startSpeed"];
+
+        $command = $this->get_plane_script($r);
+
+        $response = trim(shell_exec('octave --no-gui --quiet --eval "pkg load control;'. $command .'"'));
+
+
+        $parsed = explode("ans =",$response);		
+
+        $position = explode('  ',$parsed[1]);
+        $alfa = explode('  ',$parsed[2]);
+
+	$position = array_map('trim', $position);
+	$alfa = array_map('trim',$alfa);
+       
+        $return = array(
+            "naklonLietadla" => $position,
+            "naklonKlapky" => $alfa
+        );
+
+        return json_encode($return);
+        } catch (\Throwable $th) {
+//throw $th;         
+  	 return response("Error",500);
+        }
+
+
+    }
+
+    private function get_plane_script($r,$A,$Q,$T)
+    {
+        return "
+        A = [-0.313 56.7 0; -0.0139 -0.426 0; 0 56.7 0];
+        B = [0.232; 0.0203; 0];
+        C = [0 0 1];
+        D = [0];
+
+        p = 2;
+        K = lqr(A,B,p*C'*C,1);
+        N = -inv(C(1,:)*inv(A-B*K)*B);
+
+        sys = ss(A-B*K, B*N, C, D);
+
+        t = 0:0.1:40;
+        r =" .$r .";
+        initAlfa=".$A.";
+        initQ=".$Q.";
+        initTheta=".$T.";
+        [y,t,x]=lsim(sys,r*ones(size(t)),t,[initAlfa;initQ;initTheta]);
+        x(:,3)
+        r*ones(size(t))*N-x*K'";
+
+    }
+
 }
