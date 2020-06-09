@@ -66,7 +66,7 @@
 {{ csrf_field() }}
   <div class="form-group">
     <label for="exampleInputEmail1">{{ __('web.email')}}</label>
-    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="{{ __('web.vloz_email') }}">
   </div>
   <button type="submit" class="btn btn-primary">{{ __('web.poslat')}}</button>
 </form>

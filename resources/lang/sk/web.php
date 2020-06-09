@@ -4,7 +4,7 @@ return [
     'sprava' => 'Toto je správa po slovensky',
     'language' => 'Jazyk',
     'main_route' => 'Hlavná',
-    'dropdown' => 'Podstránky',
+    'dropdown' => 'Modely',
     'statistika' => 'Štatistika',
     'modelA' => 'Model A',
     'modelB' => 'Model B',
@@ -21,5 +21,17 @@ return [
     'input' => 'Vstup',
     'response' => 'Odpoveď',
     'execute' => 'Vykonaj',
-    'inverzne_kyvadlo' => 'Inverzné kyvadlo'
+    'inverzne_kyvadlo' => 'Inverzné kyvadlo',
+    'suspension' => 'Tlmič',
+    'obstacle' => 'Prekážka',
+    'height_obstacle' => 'Zadajte výšku prekážky',
+    'show_graph' => 'Zobraznie grafu',
+    'plane_title' => 'Náklon lietadla',
+    'new_angle' => 'Zadajte požadovaný uhol',
+    'graph' => 'Graf',
+    'vloz_email' => 'Vlož email',
+    'ball' => 'Gulička na tyči',
+    'ball_position' => 'Pozícia loptičky',
+    'animation_render' => 'Zobraz animáciu',
+    'display_graph' => 'Zobraz graf'
 ];

@@ -32,3 +32,7 @@
 </div>
 
 @endsection
+
+@section('scripts')
+<script type="text/javascript" src="{{ asset('md/js/script.js') }}"></script>
+@endsection

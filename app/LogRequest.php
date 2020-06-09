@@ -10,7 +10,7 @@ use Storage;
 class LogRequest{
 
     public $message;
-    public $state; 
+    public $state;
     public $errorMessage;
 
     public function __construct($message, $state, $errorMessage=''){
@@ -18,6 +18,8 @@ class LogRequest{
         $this->state = $state;
         $this->errorMessage = $errorMessage;
     }
+
+
 
     public function save(){
         $messageToSave = "Príkaz: ".$this->message.", Stav:".$this->state.", Chyby:".$this->errorMessage;

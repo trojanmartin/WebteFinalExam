@@ -44,10 +44,10 @@
         {{ __('web.dropdown') }}
         </a>
         <div class="dropdown-menu red lighten-1" id="dm" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item text-white" href="#">ČOSI 1</a>
-          <a class="dropdown-item text-white" href="#">ČOSI 2</a>
-          <a class="dropdown-item text-white" href="#">ČOSI 3</a>
-          <a class="dropdown-item text-white" href="#">ČOSI 4</a>
+          <a class="dropdown-item text-white" href="{{ url('ball') }}">{{ __('web.ball') }}</a>
+          <a class="dropdown-item text-white" href="{{ url('plane') }}">{{ __('web.plane_title') }}</a>
+          <a class="dropdown-item text-white" href="{{ url('suspension') }}">{{ __('web.suspension') }}</a>
+          <a class="dropdown-item text-white" href="{{ url('inverted_pendulum') }}">{{ __('web.pendulum') }}</a>
         </div>
       </li>
     </ul>
@@ -86,9 +86,11 @@
   <!-- Your custom scripts (optional) -->
   <script type="text/javascript" src="{{ asset('md/js/script.js') }}"></script>
   <script type="text/javascript" src="{{ asset('md/js/inverted_pendulum.js') }}"></script>
-  
+
 @section('scripts')
+
     @show
+
     
 </body>
 </html>
