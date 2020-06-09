@@ -19,3 +19,6 @@ Route::get('octave', 'OctaveController@index');
 Route::get('octave/ball','OctaveController@get_ball_data');
 
 Route::get('octave/inverted_pendulum','OctaveController@get_interved_pendulum_data');
+
+Route::post('octave/execute','OctaveController@execute_octave_command');
+

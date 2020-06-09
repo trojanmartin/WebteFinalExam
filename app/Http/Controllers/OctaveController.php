@@ -19,6 +19,22 @@ class OctaveController extends Controller
         return response($response,200);
     }
 
+    public function execute_octave_command(Request $request)
+    {
+        $data = $request->json()->all();
+
+       $command = $data["command"];
+
+       $result = ltrim(shell_exec('octave --no-gui --quiet --eval "'. $command .'"'));   
+
+       $response = array(
+           "result" => $result
+       );
+
+       return json_encode($response);
+    }
+
+
     public function get_ball_data(Request $request)
     {
         try {
