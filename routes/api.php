@@ -19,3 +19,5 @@ Route::get('octave', 'OctaveController@index');
 Route::get('octave/ball','OctaveController@get_ball_data');
 
 Route::post('octave/execute','OctaveController@execute_octave_command');
+
+Route::get('octave/suspension', 'OctaveController@get_suspension_data');
