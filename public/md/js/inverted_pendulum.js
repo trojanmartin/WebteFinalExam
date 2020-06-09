@@ -1,16 +1,16 @@
+const url = "https://wt58.fei.stuba.sk:4458/final";
 let position = 0;
 let angle = 0;
 let invertedPendulumIndex = 1;
 let maxIndex = 0;
 
-function getData() {
+function getDataForInvertedPendulum() {
     r = $('input#r').val();
 
     ajaxCall("GET", url + "/api/octave/inverted_pendulum?apikey=12345678910" + "&r=" + r + "&position=" + position + "&angle=" + angle, "", getInvertedPendulumResponse);
 }
 
 function getInvertedPendulumResponse(data) {
-    console.log(data);
     checkBox = document.getElementById('checkBoxForGraph').checked;
     if (checkBox == true) {
 
