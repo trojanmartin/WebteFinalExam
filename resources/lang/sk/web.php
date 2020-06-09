@@ -33,5 +33,7 @@ return [
     'ball' => 'Gulička na tyči',
     'ball_position' => 'Pozícia loptičky',
     'animation_render' => 'Zobraz animáciu',
-    'display_graph' => 'Zobraz graf'
+    'display_graph' => 'Zobraz graf',
+    'pendulum' => 'Prevrátené kyvadlo',
+    'pendulum_position' => 'Nová poloha kyvadla'
 ];

@@ -33,5 +33,7 @@ return [
     'ball' => 'Ball and Beam',
     'ball_position' => 'Ball position',
     'animation_render' => 'Animation render',
-    'display_graph' => 'Display graph'
+    'display_graph' => 'Display graph',
+    'pendulum' => 'Inverted Pendulum',
+    'pendulum_position' => 'New position of pendulum'
 ];
