@@ -74,22 +74,20 @@ function ballDataResponse(data) {
 
     maxIndex = data.position.length
     var duration = $('#horizontal_sl_value').val();
-    var x = duration / maxIndex;
-
+    var interval = duration / maxIndex;
 
     var interval = window.setInterval(function() {
         if (ballIndex == maxIndex)
             clearInterval(interval);
 
         else {
-
-            x += x;
             var a = Number((data.angle[ballIndex]));
             var angle = a.toPrecision(10);
-            animate(data.position[ballIndex], angle, x);
+
+            animate(data.position[ballIndex], angle, data.time[ballIndex]);
             ballIndex += 1;
         }
-    }, x);
+    }, interval);
 }
 
 
