@@ -6,6 +6,7 @@ let maxIndex = 0;
 let x = 0;
 let lastPosition = 0;
 let lastAngle = 0;
+let lastX = 0;
 
 
 Plotly.newPlot('g', [{
@@ -57,18 +58,20 @@ function ballDataResponse(data) {
 
     if ($("#graphCheck").is(':checked')) {
         maxIndex = data.position.length
-        lastPosition = data.position[maxIndex];
-        lastAngle = data.angle[maxIndex];
+        lastPosition = data.position[maxIndex - 1];
+        lastAngle = data.angle[maxIndex - 1];
 
         var interval = window.setInterval(function() {
             if (ballIndex == maxIndex) {
                 clearInterval(interval);
                 ballIndex = 1;
+                lastX = data.time[maxIndex - 1];
+
             } else {
                 var a = Number((data.angle[ballIndex]));
                 var angle = a.toPrecision(10);
-
-                animate(data.position[ballIndex], angle, data.time[ballIndex]);
+                var time = Number(data.time[ballIndex]) + Number(lastX);
+                animate(data.position[ballIndex], angle, time);
                 ballIndex += 1;
             }
         }, 0.00001);
