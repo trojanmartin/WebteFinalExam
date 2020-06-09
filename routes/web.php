@@ -25,7 +25,7 @@ Route::get('/', function(){
 
 Route::middleware(['statistics:model_A'])->group(function(){
      Route::get('ball',function(){
-         echo "ball";
+        return view('ball');
      });
 });
 
@@ -47,6 +47,9 @@ Route::middleware(['statistics:model_D'])->group(function(){
      });
 });
 
+Route::post('/sendemail','MailController@sendEmail');
+
 Route::get("octave", function(){
      return view('octave');
 });
+
