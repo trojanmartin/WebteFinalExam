@@ -4,7 +4,7 @@ return [
     'sprava' => 'Toto je správa po slovensky',
     'language' => 'Jazyk',
     'main_route' => 'Hlavná',
-    'dropdown' => 'Podstránky',
+    'dropdown' => 'Modely',
     'statistika' => 'Štatistika',
     'modelA' => 'Model A',
     'modelB' => 'Model B',
@@ -21,5 +21,6 @@ return [
     'input' => 'Vstup',
     'response' => 'Odpoveď',
     'execute' => 'Vykonaj',
-    'vloz_email' => 'Vlož email'
+    'vloz_email' => 'Vlož email',
+    'ball' => 'Gulička na tyči'
 ];

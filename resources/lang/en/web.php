@@ -4,7 +4,7 @@ return [
     'sprava' => 'This is text in EN',
     'language' => 'Language',
     'main_route' => 'Home',
-    'dropdown' => 'Subsites',
+    'dropdown' => 'Models',
     'statistika' => 'Statistics',
     'modelA' => 'Model A',
     'modelB' => 'Model B',
@@ -21,5 +21,6 @@ return [
     'input' => 'Input',
     'response' => 'Response',
     'execute' => 'Execute',
-    'vloz_email' => 'Enter Email'
+    'vloz_email' => 'Enter Email',
+    'ball' => 'Ball and Beam'
 ];
