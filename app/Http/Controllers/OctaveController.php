@@ -127,7 +127,7 @@ class OctaveController extends Controller
 
             $positionCar = array_map('trim', $positionCar);
             $positionWheel = array_map('trim',$positionWheel);
-            $time = array_map('trim',$positionWheel);
+            $time = array_map('trim',$time);
 
             $return = array(
                 "position_car" => $positionCar,
