@@ -21,6 +21,12 @@ return [
     'input' => 'Input',
     'response' => 'Response',
     'execute' => 'Execute',
+
+    'suspension' => 'Suspension',
+    'obstacle' => 'Obstacle',
+    'height_obstacle' => 'Insert height of obstacle',
+    'show_graph' => 'Display graph',
+
     'plane_title' => 'Plane tilt',
     'new_angle' => 'Insert desired angle',
     'graph' => 'Graph',
@@ -30,3 +36,4 @@ return [
     'animation_render' => 'Animation render',
     'display_graph' => 'Display graph'
 ];
+

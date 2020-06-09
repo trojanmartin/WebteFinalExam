@@ -21,6 +21,12 @@ return [
     'input' => 'Vstup',
     'response' => 'Odpoveď',
     'execute' => 'Vykonaj',
+
+    'suspension' => 'Tlmič',
+    'obstacle' => 'Prekážka',
+    'height_obstacle' => 'Zadajte výšku prekážky',
+    'show_graph' => 'Zobraznie grafu',
+
     'plane_title' => 'Náklon lietadla',
     'new_angle' => 'Zadajte požadovaný uhol',
     'graph' => 'Graf',
@@ -30,3 +36,4 @@ return [
     'animation_render' => 'Zobraz animáciu',
     'display_graph' => 'Zobraz graf'
 ];
+
