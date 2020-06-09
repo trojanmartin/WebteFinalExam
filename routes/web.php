@@ -31,7 +31,7 @@ Route::middleware(['statistics:model_A'])->group(function(){
 
 Route::middleware(['statistics:model_B'])->group(function(){
      Route::get('plane',function(){
-          echo "plane";
+          return view('plane');
      });
 });
 
