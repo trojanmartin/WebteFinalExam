@@ -44,4 +44,7 @@ return [
     'checklist' => 'Checklist of completed tasks',
     'name' =>  'Name and surname',
     'task' => 'Tasks'
+    'pendulum' => 'Inverted Pendulum',
+    'pendulum_position' => 'New position of pendulum'
+
 ];

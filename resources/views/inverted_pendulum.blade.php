@@ -18,7 +18,7 @@
         <div class="col-4">
             <form>
                 <div class="form-group">
-                    <label for="r">Nová poloha Kyvadla</label>
+                    <label for="r">{{ __('web.pendulum_position')}}</label>
                     <input class="form-control"  type="number" name="r" id="r" placeholder="Zadajte novú polohu kyvadla">               
                 </div> 
 
@@ -29,10 +29,10 @@
 
                 <div class="form-check">                
                     <input class="form-check-input" type="checkbox" name="graph" id="checkBoxForGraph">     
-                    <label class="form-check-label" for="checkbox">Zobrazenie grafu</label>          
+                    <label class="form-check-label" for="checkbox">{{ __('web.show_graph') }}</label>          
                 </div>          
 
-                <a type="submit" onclick="getDataForInvertedPendulum()" class="btn btn-primary float-left">Submit</a>
+                <a type="submit" onclick="getDataForInvertedPendulum()" class="btn btn-primary float-left">{{ __('web.poslat')}}</a>
             </form>     
         </div>      
     </div>  

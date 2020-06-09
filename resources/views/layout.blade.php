@@ -33,6 +33,14 @@
       <li class="nav-item">
        <a class="nav-link" href="{{ url('octave') }}">{{ __('web.octave_console') }} <span class="sr-only">(current)</span></a>       
       </li>
+
+      <li class="nav-item">
+       <a class="nav-link" href="{{ url('work') }}">{{ __('web.work') }} <span class="sr-only">(current)</span></a>       
+      </li>
+
+      <li class="nav-item">
+       <a class="nav-link" href="{{ url('documentation') }}">{{ __('web.documentation') }} <span class="sr-only">(current)</span></a>       
+      </li>
     
       
       <li class="nav-item dropdown">

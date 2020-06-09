@@ -44,5 +44,6 @@ return [
     'checklist' => 'Checklist splnených úloh',
     'name' =>  'Meno a priezvisko',
     'task' => 'Úlohy'
-
+    'pendulum' => 'Prevrátené kyvadlo',
+    'pendulum_position' => 'Nová poloha kyvadla'
 ];
