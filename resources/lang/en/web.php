@@ -42,7 +42,7 @@ return [
     'apikeydesc' => 'Api key for acces',
     'newposition' => 'New position',
     'startposition' => 'Start position',
-    'startspeed' => 'Start speed'
+    'startspeed' => 'Start speed',
     'work' => 'Work',
     'documentation' => 'Documentation',
     'architecture' => 'Architecture of the apllication',
