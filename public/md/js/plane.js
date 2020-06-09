@@ -1,4 +1,4 @@
-const url = "http://localhost:8000";
+const url = "https://wt58.fei.stuba.sk:4458/final/";
 
 let ballIndex = 1;
 let maxIndex = 0;
