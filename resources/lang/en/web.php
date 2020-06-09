@@ -36,4 +36,5 @@ return [
     'display_graph' => 'Display graph',
     'pendulum' => 'Inverted Pendulum',
     'pendulum_position' => 'New position of pendulum'
+    'export'=> 'Log export'
 ];

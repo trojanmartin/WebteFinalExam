@@ -23,15 +23,11 @@
 
 <body class="">
 <nav class="navbar navbar-expand-lg navbar-dark red lighten-1">
-  <a class="navbar-brand" href="#">{{ __('web.main_route') }}</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">{{ __('web.main_route') }} <span class="sr-only">(current)</span></a>        
+        <a class="nav-link" href="{{ url('/') }}">{{ __('web.main_route') }} <span class="sr-only">(current)</span></a>        
       </li>
 
       <li class="nav-item">
@@ -84,8 +80,7 @@
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="{{ asset('md/js/mdb.min.js') }}"></script>
   <!-- Your custom scripts (optional) -->
-  <script type="text/javascript" src="{{ asset('md/js/script.js') }}"></script>
-  <script type="text/javascript" src="{{ asset('md/js/inverted_pendulum.js') }}"></script>
+  
 
 @section('scripts')
 

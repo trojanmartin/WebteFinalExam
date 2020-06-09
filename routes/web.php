@@ -23,6 +23,10 @@ Route::get('/', function(){
      return view('statistic',['stat'=>$stat]);
 });
 
+Route::get('home', function (){
+    return redirect ('/');
+});
+
 Route::middleware(['statistics:model_A'])->group(function(){
      Route::get('ball',function(){
         return view('ball');
@@ -51,5 +55,11 @@ Route::post('/sendemail','MailController@sendEmail');
 
 Route::get("octave", function(){
      return view('octave');
+});
+
+Route::get('/export','LogController@export');
+
+Route::get('/work', function (){
+    return view('work');
 });
 

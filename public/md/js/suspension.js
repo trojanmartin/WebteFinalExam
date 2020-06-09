@@ -7,7 +7,19 @@ let r;
 let maxIndex = 0;
 let x = 0;
 
-function init() {
+var interval;
+
+
+
+
+
+
+function getDataForSuspension() {
+    r = $('input#r').val();
+    clearInterval(interval);
+    index = 1;
+    maxIndex = 0;
+
     Plotly.newPlot('gr', [{
         x: [0],
         y: [0],
@@ -30,13 +42,6 @@ function init() {
         }
     }]);
 
-}
-
-
-
-function getDataForSuspension() {
-    r = $('input#r').val();
-
     ajaxCall("GET", url + "/api/octave/suspension?apikey=12345678910&r=" + r, "", SuspensionDataResponse);
 }
 
@@ -45,8 +50,7 @@ function SuspensionDataResponse(data) {
 
     var checkbox = $('#graph');
     if ($("#graph").is(':checked')) {
-        init();
-        var interval = window.setInterval(function() {
+        interval = window.setInterval(function() {
             if (index == maxIndex) {
                 clearInterval(interval);
                 index = 1;

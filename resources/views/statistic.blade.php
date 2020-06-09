@@ -71,4 +71,9 @@
   <button type="submit" class="btn btn-primary">{{ __('web.poslat')}}</button>
 </form>
 
+
+<br>
+<h4>{{ __('web.export') }}</h4>
+<a href="{{action('LogController@export')}}" class="btn btn-danger">Export</a>
+
 @endsection

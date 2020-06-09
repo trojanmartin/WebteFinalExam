@@ -35,5 +35,6 @@ return [
     'animation_render' => 'Zobraz animáciu',
     'display_graph' => 'Zobraz graf',
     'pendulum' => 'Prevrátené kyvadlo',
-    'pendulum_position' => 'Nová poloha kyvadla'
+    'pendulum_position' => 'Nová poloha kyvadla',
+    'export'=> 'Exportovanie logu'
 ];
