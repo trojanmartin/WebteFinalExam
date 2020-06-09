@@ -129,10 +129,11 @@ class OctaveController extends Controller
         r=0.5; 
         [y,t,x]=lsim(sys,r*ones(size(t)),t,x(size(x,1),:));
         x(:,1)
-        x(:,3)";
+        x(:,3)
+        t(:)";
     }
 
-    public function get_invertedPendulum_data(Request $request)
+    public function get_inverted_pendulum_data(Request $request)
     {
         try {
            
@@ -145,19 +146,23 @@ class OctaveController extends Controller
         $command = $this->get_invertedPendulum_script($r);
 
         $response = trim(shell_exec('octave --no-gui --quiet --eval "pkg load control;'. $command .'"'));
-
+        
+        
 
         $parsed = explode("ans =",$response);		
 
         $position = explode('  ',$parsed[1]);
         $alfa = explode('  ',$parsed[2]);
+        $time = explode('  ',$parsed[3]);
 
 	    $position = array_map('trim', $position);
-	    $alfa = array_map('trim',$alfa);
+        $alfa = array_map('trim',$alfa);
+        $time = array_map('trim',$time);
        
         $return = array(
             "position" => $position,
-            "angle" => $alfa
+            "angle" => $alfa,
+            "time" => $time
         );
 
         return json_encode($return);
