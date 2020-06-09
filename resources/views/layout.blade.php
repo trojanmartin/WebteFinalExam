@@ -84,8 +84,7 @@
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="{{ asset('md/js/mdb.min.js') }}"></script>
   <!-- Your custom scripts (optional) -->
-  <script type="text/javascript" src="{{ asset('md/js/script.js') }}"></script>
-  <script type="text/javascript" src="{{ asset('md/js/inverted_pendulum.js') }}"></script>
+  
 
 @section('scripts')
 
