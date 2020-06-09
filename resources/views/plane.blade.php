@@ -34,6 +34,8 @@
     </div>  
   </div>
 
+
+
   <div class="row">
   <div class="col-12">
             <div id="g" style="width:1200px;height:500;">

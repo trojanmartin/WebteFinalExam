@@ -3,32 +3,42 @@ const url = "https://wt58.fei.stuba.sk:4458/final";
 let ballIndex = 1;
 let maxIndex = 0;
 
-Plotly.newPlot('g', [{
-    x: [0],
-    y: [0],
-    type: 'line',
-    name: 'klapka',
-    line: {
-        color: 'rgb(0,0,255)',
-        width: 2
-    }
-}], {});
+let interval;
 
-Plotly.plot("g", [{
-    x: [0],
-    y: [0],
-    type: 'line',
-    name: 'lietadlo',
-    line: {
-        color: 'rgb(255,0,0)',
-        width: 2
-    }
-}]);
+
 
 
 
 function getDataForPlane() {
     r = $('input#r').val();
+    ballIndex = 1;
+    maxIndex = 0;
+
+    clearInterval(interval);
+    Plotly.newPlot('g', [{
+        x: [0],
+        y: [0],
+        type: 'line',
+        name: 'klapka',
+        line: {
+            color: 'rgb(0,0,255)',
+            width: 2
+        }
+    }], {});
+
+    Plotly.plot("g", [{
+        x: [0],
+        y: [0],
+        type: 'line',
+        name: 'lietadlo',
+        line: {
+            color: 'rgb(255,0,0)',
+            width: 2
+        }
+    }]);
+
+
+
 
     ajaxCall("GET", url + "/api/octave/plane?apikey=12345678910&r=" + r, "", planeDataResponse);
 }
@@ -39,7 +49,7 @@ function planeDataResponse(data) {
     if ($("#graphCheck").is(':checked')) {
 
         maxIndex = data.naklonLietadla.length
-        var interval = window.setInterval(function() {
+        interval = window.setInterval(function() {
             if (ballIndex == maxIndex) {
                 clearInterval(interval);
                 ballIndex = 1;
