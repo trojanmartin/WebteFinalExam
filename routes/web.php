@@ -27,6 +27,10 @@ Route::get('home', function (){
     return redirect ('/');
 });
 
+Route::get('documentation', function (){
+     return view('documentation');
+ });
+
 Route::middleware(['statistics:model_A'])->group(function(){
      Route::get('ball',function(){
         return view('ball');
