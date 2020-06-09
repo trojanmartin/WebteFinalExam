@@ -53,5 +53,5 @@
 
 @section('scripts')
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-
+<script type="text/javascript" src="{{ asset('md/js/script.js') }}"></script>
 @endsection

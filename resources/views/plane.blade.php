@@ -43,9 +43,10 @@
 </div>
 
 
-<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-<script type="text/javascript" src="{{ asset('md/js/plane.js') }}"></script>
 @endsection
 
 @section('scripts')
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script type="text/javascript" src="{{ asset('md/js/plane.js') }}"></script>
 @endsection
