@@ -1,3 +1,4 @@
+const url = "https://wt58.fei.stuba.sk:4458/final";
 let position = 0;
 let angle = 0;
 let invertedPendulumIndex = 1;
