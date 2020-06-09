@@ -86,9 +86,7 @@
   <!-- Your custom scripts (optional) -->
   <script type="text/javascript" src="{{ asset('md/js/script.js') }}"></script>
   <script type="text/javascript" src="{{ asset('md/js/inverted_pendulum.js') }}"></script>
-  <script>$(function(){
-    $('.selectpicker').selectpicker();
-});</script>
+  
 @section('scripts')
     @show
     

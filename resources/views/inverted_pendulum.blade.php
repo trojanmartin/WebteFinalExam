@@ -32,7 +32,7 @@
                     <label class="form-check-label" for="checkbox">Zobrazenie grafu</label>          
                 </div>          
 
-                <a type="submit" onclick="getData()" class="btn btn-primary float-left">Submit</a>
+                <a type="submit" onclick="getDataForInvertedPendulum()" class="btn btn-primary float-left">Submit</a>
             </form>     
         </div>      
     </div>  
