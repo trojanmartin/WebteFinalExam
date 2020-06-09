@@ -34,7 +34,7 @@ return [
     'ball_position' => 'Pozícia loptičky',
     'animation_render' => 'Zobraz animáciu',
     'display_graph' => 'Zobraz graf',
+    'export'=> 'Exportovanie logu',
     'pendulum' => 'Prevrátené kyvadlo',
-    'pendulum_position' => 'Nová poloha kyvadla',
-    'export'=> 'Exportovanie logu'
+    'pendulum_position' => 'Nová poloha kyvadla'
 ];
