@@ -42,4 +42,15 @@ return [
     'newposition' => 'Nová pozícia',
     'startposition' => 'Štartovacia pozícia',
     'startspeed' => 'Štartovacia rýchlosť'
+    'work' => 'Práca',
+    'documentation' => 'Dokumentácia',
+    'architecture' => 'Základná architektúra',
+    'secureAPI' => 'Zabezpečenie API',
+    'graphics' => 'Grafické spracovanie',
+    'languages' => 'Jazyky',
+    'checklist' => 'Checklist splnených úloh',
+    'name' =>  'Meno a priezvisko',
+    'task' => 'Úlohy'
+    'pendulum' => 'Prevrátené kyvadlo',
+    'pendulum_position' => 'Nová poloha kyvadla'
 ];

@@ -26,7 +26,6 @@ return [
     'obstacle' => 'Obstacle',
     'height_obstacle' => 'Insert height of obstacle',
     'show_graph' => 'Display graph',
-
     'plane_title' => 'Plane tilt',
     'new_angle' => 'Insert desired angle',
     'graph' => 'Graph',
@@ -36,6 +35,7 @@ return [
     'animation_render' => 'Animation render',
     'display_graph' => 'Display graph',
     'export'=> 'Log export',
+
     'parameters' => 'Parameters',
     'arguments' => 'Arguments',
     'description' => 'Description',
@@ -43,4 +43,16 @@ return [
     'newposition' => 'New position',
     'startposition' => 'Start position',
     'startspeed' => 'Start speed'
+    'work' => 'Work',
+    'documentation' => 'Documentation',
+    'architecture' => 'Architecture of the apllication',
+    'secureAPI' => 'API securitry',
+    'graphics' => 'Graphic layout',
+    'languages' => 'Languages',
+    'checklist' => 'Checklist of completed tasks',
+    'name' =>  'Name and surname',
+    'task' => 'Tasks',
+    'pendulum' => 'Inverted Pendulum',
+    'pendulum_position' => 'New position of pendulum'
+
 ];

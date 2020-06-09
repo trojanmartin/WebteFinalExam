@@ -26,12 +26,20 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="{{ url('/') }}">{{ __('web.main_route') }} <span class="sr-only">(current)</span></a>        
       </li>
 
       <li class="nav-item">
        <a class="nav-link" href="{{ url('octave') }}">{{ __('web.octave_console') }} <span class="sr-only">(current)</span></a>       
+      </li>
+
+      <li class="nav-item">
+       <a class="nav-link" href="{{ url('work') }}">{{ __('web.work') }} <span class="sr-only">(current)</span></a>       
+      </li>
+
+      <li class="nav-item">
+       <a class="nav-link" href="{{ url('documentation') }}">{{ __('web.documentation') }} <span class="sr-only">(current)</span></a>       
       </li>
     
       

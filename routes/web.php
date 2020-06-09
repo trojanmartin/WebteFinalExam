@@ -63,3 +63,7 @@ Route::get("octave", function(){
 
 Route::get('/export','LogController@export');
 
+Route::get('/work', function (){
+    return view('work');
+});
+
