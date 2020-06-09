@@ -46,3 +46,5 @@ Route::middleware(['statistics:model_D'])->group(function(){
           echo "cosi4";
      });
 });
+
+Route::post('/sendemail','MailController@sendEmail');

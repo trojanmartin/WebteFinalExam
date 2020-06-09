@@ -12,5 +12,9 @@ return [
     'modelD' => 'Model D',
     'model' => 'Model',
     'pocet_navstev' => 'The number of visitors',
-    'nazov' => 'Name'
+    'nazov' => 'Name',
+    'pozdrav' => 'Hello',
+    'vdaka' => 'Thanks for using our website!',
+    'poslat' => 'Send',
+    'email' => 'Email Address'
 ];
