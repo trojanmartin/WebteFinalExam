@@ -99,7 +99,7 @@ class OctaveController extends Controller
                 ";
     }
 
-    private function get_invertedPendulum_script($r)
+    private function get_invertedPendulum_script($r,$position,$angle)
     {
         return "
         M = .5;
@@ -121,8 +121,8 @@ class OctaveController extends Controller
         
         t = 0:0.05:10;
         r =". $r . ";
-        initPozicia=0;
-        initUhol=0;
+        initPozicia=". $position .";
+        initUhol=" . $angle .";
         [y,t,x]=lsim(sys,r*ones(size(t)),t,[initPozicia;0;initUhol;0]);
         plot(t,y)
         
@@ -139,29 +139,27 @@ class OctaveController extends Controller
            
         $query = ($request->query());
 
-        $r = $query["r"];
-        //$startPosition = $query["startPosition"];
-        //$startSpeed = $query["startSpeed"];
+        $rFromQuery = $query["r"];
+        $positionFromQuery = $query["position"];
+        $angleFromQuery = $query["angle"];
 
-        $command = $this->get_invertedPendulum_script($r);
+        $command = $this->get_invertedPendulum_script($rFromQuery,$positionFromQuery,$angleFromQuery);
 
         $response = trim(shell_exec('octave --no-gui --quiet --eval "pkg load control;'. $command .'"'));
         
-        
-
         $parsed = explode("ans =",$response);		
 
-        $position = explode('  ',$parsed[1]);
-        $alfa = explode('  ',$parsed[2]);
-        $time = explode('  ',$parsed[3]);
+        $positionTmp = explode('  ',$parsed[1]);
+        $angleTmp = explode('  ',$parsed[2]);
+        $timeTmp = explode('   ',$parsed[3]);
 
-	    $position = array_map('trim', $position);
-        $alfa = array_map('trim',$alfa);
-        $time = array_map('trim',$time);
+	    $position = array_map('trim', $positionTmp);
+        $angle = array_map('trim',$angleTmp);
+        $time = array_map('trim',$timeTmp);
        
         $return = array(
             "position" => $position,
-            "angle" => $alfa,
+            "angle" => $angle,
             "time" => $time
         );
 

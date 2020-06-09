@@ -42,8 +42,8 @@ Route::middleware(['statistics:model_C'])->group(function(){
 });
 
 Route::middleware(['statistics:model_D'])->group(function(){
-     Route::get('cosi4',function(){
-          echo "cosi4";
+     Route::get('inverted_pendulum',function(){
+          return view('inverted_pendulum');
      });
 });
 

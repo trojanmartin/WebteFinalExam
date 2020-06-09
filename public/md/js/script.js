@@ -14,8 +14,6 @@ function callConsoleResponse(data) {
     $('textarea#response').val(data.result);
 }
 
-
-
 function ajaxCall(type, uri, data, callback) {
     $.ajax({
         type: type,
