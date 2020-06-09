@@ -84,11 +84,11 @@
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="{{ asset('md/js/mdb.min.js') }}"></script>
   <!-- Your custom scripts (optional) -->
+
+
   <script type="text/javascript" src="{{ asset('md/js/script.js') }}"></script>
 
-  <script>$(function(){
-    $('.selectpicker').selectpicker();
-});</script>
+  
 @section('scripts')
     @show
     

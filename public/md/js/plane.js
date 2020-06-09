@@ -1,11 +1,13 @@
 const url = "http://localhost:8000";
 
+let ballIndex = 1;
+let maxIndex = 0;
 
 Plotly.newPlot('g', [{
     x: [0],
     y: [0],
     type: 'line',
-    name: 'position',
+    name: 'klapka',
     line: {
         color: 'rgb(0,0,255)',
         width: 2
@@ -16,7 +18,7 @@ Plotly.plot("g", [{
     x: [0],
     y: [0],
     type: 'line',
-    name: 'angle',
+    name: 'lietadlo',
     line: {
         color: 'rgb(255,0,0)',
         width: 2
@@ -33,31 +35,26 @@ function getDataForPlane() {
 
 
 function planeDataResponse(data) {
-    console.log(data);
-    /*
-       lastPosition = data.position[maxIndex];
-       lastAngle = data.angle[maxIndex];
 
-      
-       maxIndex = data.position.length
-       var duration = $('#horizontal_sl_value').val();
-       var x = duration / maxIndex;
+    if ($("#graphCheck").is(':checked')) {
+
+        maxIndex = data.naklonLietadla.length
+        var interval = window.setInterval(function() {
+            if (ballIndex == maxIndex) {
+                clearInterval(interval);
+                ballIndex = 1;
+            } else {
+                var a = Number((data.naklonLietadla[ballIndex]));
+                var angle = a.toPrecision(10);
+
+                animate(data.naklonKlapky[ballIndex], data.naklonLietadla[ballIndex], data.time[ballIndex]);
+                ballIndex += 1;
+            }
+        }, 0.00001);
+
+    }
 
 
-       var interval = window.setInterval(function() {
-           if (ballIndex == maxIndex)
-               clearInterval(interval);
-
-           else {
-
-               x += x;
-               var a = Number((data.angle[ballIndex]));
-               var angle = a.toPrecision(10);
-               animate(data.position[ballIndex], angle, x);
-               ballIndex += 1;
-           }
-       }, x);
-       */
 }
 
 
